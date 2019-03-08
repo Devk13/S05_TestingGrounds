@@ -18,8 +18,8 @@ class S05_TESTINGGROUND_API AGun : public AActor
 	/** Location on gun mesh where projectiles should spawn. */
 	UPROPERTY(VisibleDefaultsOnly, Category = Mesh)
 	class USceneComponent* FP_MuzzleLocation;
-	
-public:	
+
+public:
 	// Sets default values for this actor's properties
 	AGun();
 
@@ -45,10 +45,10 @@ protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
 
-public:	
+public:
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
 
-	
-	
+
+
 };
