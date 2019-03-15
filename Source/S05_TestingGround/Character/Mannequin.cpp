@@ -1,7 +1,7 @@
 // Fill out your copyright notice in the Description page of Project Settings.
 
-#include "S05_TestingGround.h"
 #include "Mannequin.h"
+#include "S05_TestingGround.h"
 #include "../Weapons/Gun.h"
 #include "Camera/CameraComponent.h"
 #include "Components/CapsuleComponent.h"
@@ -39,7 +39,7 @@ void AMannequin::BeginPlay()
 	}
 	Gun = GetWorld()->SpawnActor<AGun>(GunBlueprint);
 	Gun->AttachToComponent(Mesh1P, FAttachmentTransformRules(EAttachmentRule::SnapToTarget, true), TEXT("GripPoint")); //Attach gun mesh component to Skeleton, doing it here because the skelton is not yet created in the constructor
-	Gun->AnimInstance = Mesh1P->GetAnimInstance();
+	Gun->AnimInstance = GetMesh()->GetAnimInstance();
 
 	if (InputComponent != NULL) 
 	{
