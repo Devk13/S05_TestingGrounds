@@ -20,12 +20,20 @@ AActor* UActorPool::Checkout()
 
 void UActorPool::Return(AActor* ActorToReturn)
 {
-
+	if (ActorToReturn == nullptr)
+	{
+		UE_LOG(LogTemp, Warning, TEXT("[%s] Retruned null actor: {%s}"), *GetName())
+		return;
+	}
 }
 
 void UActorPool::Add(AActor* ActorToAdd)
 {
-
+	if (ActorToAdd == nullptr)
+	{
+		UE_LOG(LogTemp, Warning, TEXT("[%s] Added null actor: {%s}"), *GetName())
+		return;
+	}
 }
 
 
