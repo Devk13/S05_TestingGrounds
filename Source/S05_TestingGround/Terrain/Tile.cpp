@@ -12,6 +12,11 @@ ATile::ATile()
 
 }
 
+void ATile::SetPool(UActorPool* InPool)
+{
+	Pool = InPool;
+}
+
 void ATile::PlaceActors(TSubclassOf<AActor> ToSpawn, int32 MinSpawn, int32 MaxSpawn, float Radius, float MinScale, float MaxScale)
 {
 	int32 NumberToSpawn = FMath::RandRange(MinSpawn, MaxSpawn);
